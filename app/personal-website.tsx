@@ -149,7 +149,7 @@ export default function PersonalWebsite() {
               Fullstack Developer
             </p>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-                <TypingAnimation className="text-base text-gray-400 sm:text-lg  max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+                <TypingAnimation className="text-base text-pink-400 sm:text-lg  max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
  Passionate fullstack developer with expertise in modern web
               technologies. I create scalable applications and love turning
               complex problems into simple, beautiful solutions. Currently
