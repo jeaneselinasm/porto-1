@@ -15,7 +15,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
-
+import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { BoxReveal } from "@/components/magicui/box-reveal";
 export default function PersonalWebsite() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -62,7 +63,7 @@ export default function PersonalWebsite() {
               href="/"
               className="text-lg sm:text-xl font-bold text-foreground"
             >
-              selina.dev
+              jeaneselina
             </Link>
 
             {/* Desktop Navigation */}
@@ -129,6 +130,7 @@ export default function PersonalWebsite() {
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-6 sm:mb-8">
             <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden bg-muted">
@@ -141,16 +143,19 @@ export default function PersonalWebsite() {
               />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
-              Jeane Selina
+           Jeane Selina
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6">
               Fullstack Developer
             </p>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-              Passionate fullstack developer with expertise in modern web
+                <TypingAnimation className="text-base text-gray-400 sm:text-lg  max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+ Passionate fullstack developer with expertise in modern web
               technologies. I create scalable applications and love turning
               complex problems into simple, beautiful solutions. Currently
               focused on React, Node.js, and cloud technologies.
+                </TypingAnimation>
+             
             </p>
           </div>
           <div className="flex justify-center space-x-3 sm:space-x-4">
@@ -207,7 +212,8 @@ export default function PersonalWebsite() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              Featured Projects
+               Featured Projects
+           
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
               Here are some of my recent projects that showcase my skills and
