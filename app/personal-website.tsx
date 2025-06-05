@@ -61,22 +61,22 @@ export default function PersonalWebsite() {
           <div className="flex justify-between items-center h-14 sm:h-16">
             <Link
               href="/"
-              className="text-lg sm:text-xl font-bold text-pink-400"
+              className="text-lg sm:text-xl font-bold text-pink-500"
             >
-              jeaneselina
+              selinadev
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <Link
                 href="#about"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-pink-600 transition-colors"
               >
                 About
               </Link>
               <Link
                 href="#projects"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-pink-600 transition-colors"
               >
                 Projects
               </Link>
@@ -135,7 +135,7 @@ export default function PersonalWebsite() {
           <div className="mb-6 sm:mb-8">
             <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden bg-muted">
               <Image
-                src="/placeholder.svg?height=128&width=128"
+                src="/profile-pic.png"
                 alt="Jeane Selina"
                 width={128}
                 height={128}
@@ -149,11 +149,11 @@ export default function PersonalWebsite() {
               Fullstack Developer
             </p>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-                <TypingAnimation className="text-base text-pink-500 sm:text-lg  max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+                <TypingAnimation className="text-base text-pink-700 sm:text-lg  max-w-2xl mx-auto px-4 sm:px-0">
  Passionate fullstack developer with expertise in modern web
               technologies. I create scalable applications and love turning
               complex problems into simple, beautiful solutions. Currently
-              focused on React, Node.js, and cloud technologies.
+              focused on NextJS, Node.js, and cloud technologies.
                 </TypingAnimation>
              
             </p>
