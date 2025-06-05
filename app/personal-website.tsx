@@ -370,7 +370,7 @@ export default function PersonalWebsite() {
         <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 text-center sm:text-left">
             <div className="text-sm text-muted-foreground order-2 sm:order-1">
-              © 2025 selina.dev
+              © 2025 selinadev.site
             </div>
             <div className="text-sm text-muted-foreground order-1 sm:order-2">
               All rights reserved
