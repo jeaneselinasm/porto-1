@@ -10,13 +10,13 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Github, Linkedin, Mail, ExternalLink, Menu } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Menu, MailOpen} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
-import { BoxReveal } from "@/components/magicui/box-reveal";
+import { SparklesText } from "@/components/magicui/sparkles-text";
 export default function PersonalWebsite() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -346,19 +346,19 @@ export default function PersonalWebsite() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/50"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50"
       >
         <div className="container mx-auto max-w-2xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-            Let's Work Together
+            <SparklesText>Let's Work Together</SparklesText>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-4 sm:px-0 leading-relaxed">
             I'm always interested in new opportunities and exciting projects.
             Let's discuss how we can bring your ideas to life.
           </p>
-          <Button size="lg" asChild className="w-full sm:w-auto">
+          <Button size="lg" asChild className="w-full sm:w-auto hover:text-pink-700 border-pink-500 bg-pink-500 text-white" variant="outline" >
             <Link href="mailto:hello@selina.dev">
-              <Mail className="mr-2 h-4 w-4" />
+              <Mail className="mr-2 h-6 w-6" />
               Get In Touch
             </Link>
           </Button>
