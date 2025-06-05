@@ -61,7 +61,7 @@ export default function PersonalWebsite() {
           <div className="flex justify-between items-center h-14 sm:h-16">
             <Link
               href="/"
-              className="text-lg sm:text-xl font-bold text-foreground"
+              className="text-lg sm:text-xl font-bold text-pink-400"
             >
               jeaneselina
             </Link>
