@@ -349,9 +349,9 @@ export default function PersonalWebsite() {
         className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50"
       >
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-            <SparklesText>Let's Work Together</SparklesText>
-          </h2>
+          
+            <SparklesText className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4" >Let's Work Together</SparklesText>
+          
           <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-4 sm:px-0 leading-relaxed">
             I'm always interested in new opportunities and exciting projects.
             Let's discuss how we can bring your ideas to life.
