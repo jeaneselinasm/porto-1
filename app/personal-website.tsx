@@ -1,46 +1,56 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Github, Linkedin, Mail, ExternalLink, Menu } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Github, Linkedin, Mail, ExternalLink, Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 export default function PersonalWebsite() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const projects = [
     {
       title: "E-Commerce Platform",
       subtitle: "Full-stack web application",
       image: "/placeholder.svg?height=200&width=300",
-      description: "Modern e-commerce platform built with Next.js and Stripe integration",
+      description:
+        "Modern e-commerce platform built with Next.js and Stripe integration",
     },
     {
       title: "Task Management App",
       subtitle: "React Native mobile app",
       image: "/placeholder.svg?height=200&width=300",
-      description: "Cross-platform mobile app for team collaboration and task tracking",
+      description:
+        "Cross-platform mobile app for team collaboration and task tracking",
     },
     {
       title: "Data Analytics Dashboard",
       subtitle: "Real-time analytics platform",
       image: "/placeholder.svg?height=200&width=300",
-      description: "Interactive dashboard for business intelligence and data visualization",
+      description:
+        "Interactive dashboard for business intelligence and data visualization",
     },
-  ]
+  ];
 
   const techStack = {
     frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
     backend: ["Node.js", "Python", "Express", "FastAPI", "PostgreSQL"],
     devops: ["Docker", "AWS", "Vercel", "GitHub Actions", "Kubernetes"],
     tools: ["Git", "VS Code", "Figma", "Postman", "Linear"],
-  }
+  };
 
-  const closeSheet = () => setIsOpen(false)
+  const closeSheet = () => setIsOpen(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,21 +58,30 @@ export default function PersonalWebsite() {
       <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14 sm:h-16">
-            <Link href="/" className="text-lg sm:text-xl font-bold text-foreground">
+            <Link
+              href="/"
+              className="text-lg sm:text-xl font-bold text-foreground"
+            >
               selina.dev
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="#about"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 About
               </Link>
-              <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="#projects"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Projects
               </Link>
-              <Button asChild>
-                <Link href="#contact">Contact</Link>
-              </Button>
+              <Link href="#contact">
+                <RainbowButton>Contact</RainbowButton>
+              </Link>
             </div>
 
             {/* Mobile Navigation */}
@@ -124,27 +143,53 @@ export default function PersonalWebsite() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
               Jeane Selina
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6">Fullstack Developer</p>
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6">
+              Fullstack Developer
+            </p>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-              Passionate fullstack developer with expertise in modern web technologies. I create scalable applications
-              and love turning complex problems into simple, beautiful solutions. Currently focused on React, Node.js,
-              and cloud technologies.
+              Passionate fullstack developer with expertise in modern web
+              technologies. I create scalable applications and love turning
+              complex problems into simple, beautiful solutions. Currently
+              focused on React, Node.js, and cloud technologies.
             </p>
           </div>
           <div className="flex justify-center space-x-3 sm:space-x-4">
-            <Button variant="outline" size="icon" asChild className="h-9 w-9 sm:h-10 sm:w-10">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+              className="h-9 w-9 sm:h-10 sm:w-10"
+            >
+              <Link
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
-            <Button variant="outline" size="icon" asChild className="h-9 w-9 sm:h-10 sm:w-10">
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+              className="h-9 w-9 sm:h-10 sm:w-10"
+            >
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Linkedin className="h-4 w-4" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </Button>
-            <Button variant="outline" size="icon" asChild className="h-9 w-9 sm:h-10 sm:w-10">
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+              className="h-9 w-9 sm:h-10 sm:w-10"
+            >
               <Link href="mailto:hello@selina.dev">
                 <Mail className="h-4 w-4" />
                 <span className="sr-only">Email</span>
@@ -155,19 +200,26 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
+      <section
+        id="projects"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/50"
+      >
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Featured Projects
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
-              Here are some of my recent projects that showcase my skills and experience
+              Here are some of my recent projects that showcase my skills and
+              experience
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow duration-300">
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-shadow duration-300"
+              >
                 <CardHeader className="p-0">
                   <div className="aspect-video overflow-hidden rounded-t-lg">
                     <Image
@@ -184,8 +236,12 @@ export default function PersonalWebsite() {
                     <span className="leading-tight">{project.title}</span>
                     <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" />
                   </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground mb-3">{project.subtitle}</CardDescription>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                  <CardDescription className="text-sm text-muted-foreground mb-3">
+                    {project.subtitle}
+                  </CardDescription>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -197,8 +253,12 @@ export default function PersonalWebsite() {
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Tech Stack</h2>
-            <p className="text-base sm:text-lg text-muted-foreground">Technologies and tools I work with</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              Tech Stack
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              Technologies and tools I work with
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             <Card>
@@ -208,7 +268,11 @@ export default function PersonalWebsite() {
               <CardContent className="pt-0">
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {techStack.frontend.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs sm:text-sm">
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="text-xs sm:text-sm"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -222,7 +286,11 @@ export default function PersonalWebsite() {
               <CardContent className="pt-0">
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {techStack.backend.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs sm:text-sm">
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="text-xs sm:text-sm"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -236,7 +304,11 @@ export default function PersonalWebsite() {
               <CardContent className="pt-0">
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {techStack.devops.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs sm:text-sm">
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="text-xs sm:text-sm"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -250,7 +322,11 @@ export default function PersonalWebsite() {
               <CardContent className="pt-0">
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {techStack.tools.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs sm:text-sm">
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="text-xs sm:text-sm"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -262,14 +338,17 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
+      <section
+        id="contact"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/50"
+      >
         <div className="container mx-auto max-w-2xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             Let's Work Together
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-4 sm:px-0 leading-relaxed">
-            I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas
-            to life.
+            I'm always interested in new opportunities and exciting projects.
+            Let's discuss how we can bring your ideas to life.
           </p>
           <Button size="lg" asChild className="w-full sm:w-auto">
             <Link href="mailto:hello@selina.dev">
@@ -284,13 +363,23 @@ export default function PersonalWebsite() {
       <footer className="border-t bg-background py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 text-center sm:text-left">
-            <div className="text-sm text-muted-foreground order-2 sm:order-1">© 2025 selina.dev</div>
-            <div className="text-sm text-muted-foreground order-1 sm:order-2">All rights reserved</div>
+            <div className="text-sm text-muted-foreground order-2 sm:order-1">
+              © 2025 selina.dev
+            </div>
+            <div className="text-sm text-muted-foreground order-1 sm:order-2">
+              All rights reserved
+            </div>
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm order-3">
-              <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/terms"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Terms of Service
               </Link>
-              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/privacy"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Privacy
               </Link>
             </div>
@@ -298,5 +387,5 @@ export default function PersonalWebsite() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
