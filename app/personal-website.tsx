@@ -45,10 +45,10 @@ export default function PersonalWebsite() {
   ];
 
   const techStack = {
-    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
-    backend: ["Node.js", "Python", "Express", "FastAPI", "PostgreSQL"],
-    devops: ["Docker", "AWS", "Vercel", "GitHub Actions", "Kubernetes"],
-    tools: ["Git", "VS Code", "Figma", "Postman", "Linear"],
+    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Bootstrap", "Pinia"],
+    backend: ["Node.js", "Sequelize", "Express", "FastAPI", "PostgreSQL","GraphQL", "MongoDB", "Rest API", "Json Web Token"],
+    devops: ["Docker", "Vercel", "GitHub Actions"],
+    tools: ["Git", "VS Code", "Figma", "Postman"],
   };
 
   const closeSheet = () => setIsOpen(false);
@@ -277,7 +277,7 @@ export default function PersonalWebsite() {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="text-xs sm:text-sm"
+                      className="text-xs sm:text-sm text-white bg-pink-700"
                     >
                       {tech}
                     </Badge>
@@ -295,7 +295,7 @@ export default function PersonalWebsite() {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="text-xs sm:text-sm"
+                      className="text-xs sm:text-sm bg-pink-200"
                     >
                       {tech}
                     </Badge>
@@ -313,7 +313,7 @@ export default function PersonalWebsite() {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="text-xs sm:text-sm"
+                      className="text-xs sm:text-sm bg-pink-300"
                     >
                       {tech}
                     </Badge>
@@ -331,7 +331,7 @@ export default function PersonalWebsite() {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="text-xs sm:text-sm"
+                      className="text-xs sm:text-sm bg-pink-500 text-white"
                     >
                       {tech}
                     </Badge>
