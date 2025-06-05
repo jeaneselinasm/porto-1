@@ -149,7 +149,7 @@ export default function PersonalWebsite() {
               Fullstack Developer
             </p>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-                <TypingAnimation className="text-base text-pink-400 sm:text-lg  max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+                <TypingAnimation className="text-base text-pink-500 sm:text-lg  max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
  Passionate fullstack developer with expertise in modern web
               technologies. I create scalable applications and love turning
               complex problems into simple, beautiful solutions. Currently
@@ -163,7 +163,7 @@ export default function PersonalWebsite() {
               variant="outline"
               size="icon"
               asChild
-              className="h-9 w-9 sm:h-10 sm:w-10"
+              className="h-9 w-9 sm:h-10 sm:w-10 bg-pink-200"
             >
               <Link
                 href="https://github.com"
@@ -178,7 +178,7 @@ export default function PersonalWebsite() {
               variant="outline"
               size="icon"
               asChild
-              className="h-9 w-9 sm:h-10 sm:w-10"
+              className="h-9 w-9 sm:h-10 sm:w-10 bg-pink-200"
             >
               <Link
                 href="https://linkedin.com"
@@ -193,7 +193,7 @@ export default function PersonalWebsite() {
               variant="outline"
               size="icon"
               asChild
-              className="h-9 w-9 sm:h-10 sm:w-10"
+              className="h-9 w-9 sm:h-10 sm:w-10 bg-pink-200"
             >
               <Link href="mailto:hello@selina.dev">
                 <Mail className="h-4 w-4" />
