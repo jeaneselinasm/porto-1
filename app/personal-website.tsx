@@ -207,7 +207,7 @@ export default function PersonalWebsite() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/50"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50"
       >
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
@@ -239,7 +239,7 @@ export default function PersonalWebsite() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl mb-2 flex items-start justify-between gap-2">
-                    <span className="leading-tight">{project.title}</span>
+                    <span className="leading-tight text-pink-500">{project.title}</span>
                     <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" />
                   </CardTitle>
                   <CardDescription className="text-sm text-muted-foreground mb-3">
