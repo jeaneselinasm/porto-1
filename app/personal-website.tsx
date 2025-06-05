@@ -267,7 +267,7 @@ export default function PersonalWebsite() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            <Card>
+            <Card className="border-pink-500">
               <CardHeader className="pb-3 sm:pb-6">
                 <CardTitle className="text-lg sm:text-xl">Frontend</CardTitle>
               </CardHeader>
@@ -285,7 +285,7 @@ export default function PersonalWebsite() {
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-pink-500">
               <CardHeader className="pb-3 sm:pb-6">
                 <CardTitle className="text-lg sm:text-xl">Backend</CardTitle>
               </CardHeader>
@@ -303,7 +303,7 @@ export default function PersonalWebsite() {
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-pink-500">
               <CardHeader className="pb-3 sm:pb-6">
                 <CardTitle className="text-lg sm:text-xl">DevOps</CardTitle>
               </CardHeader>
@@ -321,7 +321,7 @@ export default function PersonalWebsite() {
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-pink-500">
               <CardHeader className="pb-3 sm:pb-6">
                 <CardTitle className="text-lg sm:text-xl">Tools</CardTitle>
               </CardHeader>
