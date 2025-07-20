@@ -181,7 +181,7 @@ export default function PersonalWebsite() {
               className="h-9 w-9 sm:h-10 sm:w-10 bg-pink-200"
             >
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/jeane-manuhutu/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -195,7 +195,7 @@ export default function PersonalWebsite() {
               asChild
               className="h-9 w-9 sm:h-10 sm:w-10 bg-pink-200"
             >
-              <Link href="mailto:hello@selina.dev">
+              <Link href="mailto:jeanessmanuhutu@gmail.com">
                 <Mail className="h-4 w-4" />
                 <span className="sr-only">Email</span>
               </Link>
