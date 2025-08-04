@@ -10,7 +10,14 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Github, Linkedin, Mail, ExternalLink, Menu, MailOpen} from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Menu,
+  MailOpen,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,6 +34,7 @@ export default function PersonalWebsite() {
       image: "/placeholder.svg?height=200&width=300",
       description:
         "Modern e-commerce platform built with Next.js and Stripe integration",
+      url: "https://church-website-sample-wheat.vercel.app/",
     },
     {
       title: "Task Management App",
@@ -34,19 +42,46 @@ export default function PersonalWebsite() {
       image: "/placeholder.svg?height=200&width=300",
       description:
         "Cross-platform mobile app for team collaboration and task tracking",
+      url: "https://church-website-sample-wheat.vercel.app/",
     },
+    // {
+    //   title: "Data Analytics Dashboard",
+    //   subtitle: "Real-time analytics platform",
+    //   image: "/placeholder.svg?height=200&width=300",
+    //   description:
+    //     "Interactive dashboard for business intelligence and data visualization",
+    // },
     {
-      title: "Data Analytics Dashboard",
-      subtitle: "Real-time analytics platform",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "Grace Fellowship Church",
+      subtitle: "Church Website Design ",
+      image: "/worship.png",
       description:
-        "Interactive dashboard for business intelligence and data visualization",
+        "Showcasing intuitive navigation, ministry highlights, and weekly worship schedules in a clean and accessible design.",
+      url: "https://church-website-sample-wheat.vercel.app/",
     },
   ];
 
   const techStack = {
-    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Bootstrap", "Pinia"],
-    backend: ["Node.js", "Sequelize", "Express", "FastAPI", "PostgreSQL","GraphQL", "MongoDB", "Rest API", "Json Web Token"],
+    frontend: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vue.js",
+      "Bootstrap",
+      "Pinia",
+    ],
+    backend: [
+      "Node.js",
+      "Sequelize",
+      "Express",
+      "FastAPI",
+      "PostgreSQL",
+      "GraphQL",
+      "MongoDB",
+      "Rest API",
+      "Json Web Token",
+    ],
     devops: ["Docker", "Vercel", "GitHub Actions"],
     tools: ["Git", "VS Code", "Figma", "Postman"],
   };
@@ -130,7 +165,6 @@ export default function PersonalWebsite() {
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-    
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-6 sm:mb-8">
             <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden bg-muted">
@@ -143,19 +177,18 @@ export default function PersonalWebsite() {
               />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
-           Jeane Selina
+              Jeane Selina
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6">
               Fullstack Developer
             </p>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-                <TypingAnimation className="text-base text-pink-700 sm:text-lg  max-w-2xl mx-auto px-4 sm:px-0">
- Passionate fullstack developer with expertise in modern web
-              technologies. I create scalable applications and love turning
-              complex problems into simple, beautiful solutions. Currently
-              focused on NextJS, Node.js, and cloud technologies.
-                </TypingAnimation>
-             
+              <TypingAnimation className="text-base text-pink-700 sm:text-lg  max-w-2xl mx-auto px-4 sm:px-0">
+                Passionate fullstack developer with expertise in modern web
+                technologies. I create scalable applications and love turning
+                complex problems into simple, beautiful solutions. Currently
+                focused on NextJS, Node.js, and cloud technologies.
+              </TypingAnimation>
             </p>
           </div>
           <div className="flex justify-center space-x-3 sm:space-x-4">
@@ -212,8 +245,7 @@ export default function PersonalWebsite() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-               Featured Projects
-           
+              Featured Projects
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
               Here are some of my recent projects that showcase my skills and
@@ -226,8 +258,8 @@ export default function PersonalWebsite() {
                 key={index}
                 className="group hover:shadow-lg transition-shadow duration-300"
               >
-                <CardHeader className="p-0">
-                  <div className="aspect-video overflow-hidden rounded-t-lg">
+                <CardHeader className="p-0 m-0">
+                  <div className="overflow-hidden rounded-t-lg">
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
@@ -239,8 +271,17 @@ export default function PersonalWebsite() {
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl mb-2 flex items-start justify-between gap-2">
-                    <span className="leading-tight text-pink-500">{project.title}</span>
-                    <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" />
+                    <span className="leading-tight text-pink-500">
+                      {project.title}
+                    </span>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity mt-0.5"
+                    >
+                      <ExternalLink className="h-4 w-4 flex-shrink-0" />
+                    </a>
                   </CardTitle>
                   <CardDescription className="text-sm text-muted-foreground mb-3">
                     {project.subtitle}
@@ -349,14 +390,20 @@ export default function PersonalWebsite() {
         className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50"
       >
         <div className="container mx-auto max-w-2xl text-center">
-          
-            <SparklesText className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4" >Let's Work Together</SparklesText>
-          
+          <SparklesText className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+            Let's Work Together
+          </SparklesText>
+
           <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-4 sm:px-0 leading-relaxed">
             I'm always interested in new opportunities and exciting projects.
             Let's discuss how we can bring your ideas to life.
           </p>
-          <Button size="lg" asChild className="w-full sm:w-auto hover:text-pink-700 border-pink-500 bg-pink-500 text-white" variant="outline" >
+          <Button
+            size="lg"
+            asChild
+            className="w-full sm:w-auto hover:text-pink-700 border-pink-500 bg-pink-500 text-white"
+            variant="outline"
+          >
             <Link href="mailto:hello@selina.dev">
               <Mail className="mr-2 h-6 w-6" />
               Get In Touch
